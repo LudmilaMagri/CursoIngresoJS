@@ -1,17 +1,19 @@
 
 function mostrar()
 {
-var ancho;
-var largo;
+var anchoString;
+var anchoParseado;
+var largoString;
+var largoParseado;
 var resultado;
 
-ancho= prompt ("Ingrese ancho");
-ancho= parseInt (ancho);
+anchoString= prompt ("Ingrese ancho");
+anchoParseado= parseInt (anchoString);
 
-largo= prompt ("Ingrese largo");
-largo= parseInt(largo);
+largoString= prompt ("Ingrese largo");
+largoParseado= parseInt(largoString);
 
-resultado= ancho+largo;
+resultado= 2*(anchoParseado+largoParseado);
 
 alert("El perímetro del rectángulo es "+ resultado);
 

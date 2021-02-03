@@ -5,21 +5,74 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-	alert("ok");	
+	var numeroUnoString;
+	var numeroDosString;
+	var numeroUnoParseado;
+	var numeroDosParseado;
+	var resultado;
+	
+	numeroUnoString= txtIdNumeroUno.value;
+	numeroUnoParseado= parseInt(numeroUnoString);
+
+	numeroDosString=txtIdNumeroDos.value;
+	numeroDosParseado=parseInt(numeroDosString);
+
+	resultado=numeroUnoParseado+numeroDosParseado;
+	alert("La suma es "+resultado);
+
 }
 
 function restar()
 {
+	var numeroUnoString;
+	var numeroDosString;
+	var numeroUnoParseado;
+	var numeroDosParseado;
+	var resultado;
 	
+	numeroUnoString= txtIdNumeroUno.value;
+	numeroUnoParseado= parseInt(numeroUnoString);
+
+	numeroDosString=txtIdNumeroDos.value;
+	numeroDosParseado=parseInt(numeroDosString);
+
+	resultado=numeroUnoParseado-numeroDosParseado;
+	alert("La resta es "+resultado);
 }
 
 function multiplicar()
 { 
+	var numeroUnoString;
+	var numeroDosString;
+	var numeroUnoParseado;
+	var numeroDosParseado;
+	var resultado;
 	
+	numeroUnoString= txtIdNumeroUno.value;
+	numeroUnoParseado= parseInt(numeroUnoString);
+
+	numeroDosString=txtIdNumeroDos.value;
+	numeroDosParseado=parseInt(numeroDosString);
+
+	resultado= numeroUnoParseado*numeroDosParseado;
+	alert("La multiplicacion es "+resultado);
 }
 
 function dividir()
 {
+	var numeroUnoString;
+	var numeroDosString;
+	var numeroUnoParseado;
+	var numeroDosParseado;
+	var resultado;
 	
+	numeroUnoString= txtIdNumeroUno.value;
+	numeroUnoParseado= parseInt(numeroUnoString);
+
+	numeroDosString=txtIdNumeroDos.value;
+	numeroDosParseado=parseInt(numeroDosString);
+	
+	resultado=numeroUnoParseado/numeroDosParseado;
+	alert ("La division es "+resultado);
 }
 
