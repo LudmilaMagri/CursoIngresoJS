@@ -6,51 +6,64 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
-    var largo;
-    var ancho;
+    var largoString;
+    var largoParseado;
+    var anchoString;
+    var anchoParseado;
     var perimetro;
-    var alambre;
+    var alambre=3;
 
-    largo=parseInt(txtIdLargo.value);
-    ancho=parseInt(txtIdAncho.value);
+    largoString=(txtIdLargo.value);
+    largoParseado= parseInt(largoString);
+    anchoString=(txtIdAncho.value);
+    anchoParseado=parseInt(anchoString);
 
-    perimetro= (largo+ancho)*2;
-    alambre=perimetro*3;
+    perimetro= (largoParseado+anchoParseado)*2;
+    alambreTotal=perimetro*alambre;
 
-    alert("Ustede debe comprar "+alambre+ " m de alambre");
+    alert("Ustede debe comprar "+alambreTotal+ " m de alambre");
 
 }
 function Circulo () 
 {
-    var radio;
+    var radioString;
+    var radioParseado;
     var perimetro;
-    var alambre;
-    const PI= 3.14;
+    var alambre=3;
+    var alambreTotal;
+    const PI= Math.PI;
 
-    radio= parseInt(txtIdRadio.value);
+    radioString= (txtIdRadio.value);
+    radioParseado=parseInt(radioString);
 
-    perimetro=2*PI*radio;
+    perimetro=2*PI*radioParseado;
 
-    alambre= perimetro*3;
+    alambreTotal= perimetro*alambre;
 
-    alert("Ustede debe comprar "+alambre.toFixed(2)+ " m de alambre");
+    alert("Ustede debe comprar "+alambreTotal.toFixed(2)+ " m de alambre");
 }
 function Materiales () 
 {
-    var largo;
-    var ancho;
+    var largoString;
+    var largoParseado;
+    var anchoString;
+    var anchoParseado;
     var area;
-    var bolsascemento;
-    var bolsascal;
+    var bolsasCemento=2;
+    var bolsasCementoTotal;
+    var bolsasCal=3;
+    var bolsasCalTotal;
 
-    largo=parseInt(txtIdLargo.value);
-    ancho=parseInt(txtIdAncho.value);
+    largoString=(txtIdLargo.value);
+    largoParseado= parseInt(largoString);
+    anchoString=(txtIdAncho.value);
+    anchoParseado=parseInt(anchoString);
 
-    area= largo*ancho;
+    area= largoParseado*anchoParseado;
 
-    bolsascemento= area*2;
+    bolsasCementoTotal= area*bolsasCemento;
 
-    bolsascal= area*3;
+    bolsasCalTotal= area*bolsasCal;
 
-    alert("Usted necesita "+bolsascemento+ " bolsas de cemento y "+ bolsascal+" bolsas de cal");
+    alert("Usted necesita "+bolsasCementoTotal+ " bolsas de cemento y "+ bolsasCalTotal+" bolsas de cal");
 }

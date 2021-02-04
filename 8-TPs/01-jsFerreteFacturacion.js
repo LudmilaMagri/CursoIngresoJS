@@ -4,17 +4,25 @@ B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
-{
-    var precio1;
-    var precio2;
-    var precio3;
+{	
+    var precioUnoString;
+    var precioUnoParseado;
+    var precioDosString;
+    var precioDosParseado;
+    var precioTresString;
+    var precioTresParseado;
     var resultado;
 
-    precio1= parseInt(txtIdPrecioUno.value);
-    precio2= parseInt(txtIdPrecioDos.value);
-    precio3= parseInt(txtIdPrecioTres.value);
+    precioUnoString=(txtIdPrecioUno.value);
+    precioUnoParseado= parseInt(precioUnoString);
 
-    resultado=precio1+precio2+precio3;
+    precioDosString= (txtIdPrecioDos.value);
+    precioDosParseado= parseInt(precioDosString);
+
+    precioTresString= (txtIdPrecioTres.value);
+    precioTresParseado= parseInt (precioTresString);
+
+    resultado=precioUnoParseado+precioDosParseado+precioTresParseado;
 
     alert("Su precio es $"+resultado);
 
@@ -22,33 +30,49 @@ function Sumar ()
 }
 function Promedio () 
 {
-	var precio1;
-    var precio2;
-    var precio3;
+	var precioUnoString;
+    var precioUnoParseado;
+    var precioDosString;
+    var precioDosParseado;
+    var precioTresString;
+    var precioTresParseado;
     var resultado;
 
-    precio1= parseInt(txtIdPrecioUno.value);
-    precio2= parseInt(txtIdPrecioDos.value);
-    precio3= parseInt(txtIdPrecioTres.value);
+    precioUnoString=(txtIdPrecioUno.value);
+    precioUnoParseado= parseInt(precioUnoString);
 
-    resultado= (precio1+precio2+precio3)/3;
+    precioDosString= (txtIdPrecioDos.value);
+    precioDosParseado= parseInt(precioDosString);
+
+    precioTresString= (txtIdPrecioTres.value);
+    precioTresParseado= parseInt (precioTresString);
+
+    resultado= (precioUnoParseado+precioDosParseado+precioTresParseado)/3;
 
     alert("Su precio es $"+resultado.toFixed(2));
 }
 function PrecioFinal () 
 {
-	var precio1;
-    var precio2;
-    var precio3;
+    var precioUnoString;
+    var precioUnoParseado;
+    var precioDosString;
+    var precioDosParseado;
+    var precioTresString;
+    var precioTresParseado;
     var suma;
     var iva;
     var importefinal;
 
-    precio1= parseInt(txtIdPrecioUno.value);
-    precio2= parseInt(txtIdPrecioDos.value);
-    precio3= parseInt(txtIdPrecioTres.value);
+    precioUnoString=(txtIdPrecioUno.value);
+    precioUnoParseado= parseInt(precioUnoString);
 
-    suma=(precio1+precio2+precio3);
+    precioDosString= (txtIdPrecioDos.value);
+    precioDosParseado= parseInt(precioDosString);
+
+    precioTresString= (txtIdPrecioTres.value);
+    precioTresParseado= parseInt (precioTresString);
+
+    suma=(precioUnoParseado+precioDosParseado+precioTresParseado);
     iva= suma*0.21;
     importefinal=suma+iva;
 

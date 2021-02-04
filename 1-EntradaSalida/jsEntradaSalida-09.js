@@ -8,12 +8,16 @@ function mostrarAumento()
 
 	var sueldoString;
 	var sueldoParseado;
-	var resultado;
+	var porcentajeAumento= 10;
+	var aumento;
+	var resultadoConAumento;
 
 	sueldoString=txtIdSueldo.value;
 	sueldoParseado=parseInt(sueldoString);
 
-	resultado=(sueldoParseado*0.1)+ sueldoParseado;
+	aumento=sueldoParseado*porcentajeAumento/100;
+
+	resultadoConAumento= sueltoParseado+aumento;
 
 	txtIdResultado.value= resultado;
 }

@@ -1,15 +1,20 @@
 function mostrar()
 {
-var precio;
+var precioString;
+var precioParseado;
+var descuentoString;
+var descuentoParseado;
 var descuento;
-var resultado;
+var precioFinal;
 
-precio= prompt ("Ingrese el precio");
-precio=parseInt(precio);
-descuento= prompt ("Ingrese el porcentaje de descuento");
-descuento=parseInt(descuento);
+precioString= prompt ("Ingrese el precio");
+precioParseado=parseInt(precioString);
+descuentoString= prompt ("Ingrese el porcentaje de descuento");
+descuentoParseado=parseInt(descuentoString);
 
-resultado=(precio*descuento)/100;
+descuento=precioParseado*descuentoParseado/100;
 
-elPrecioFinal.value= resultado;
+precioFinal=precioParseado-descuento;
+
+elPrecioFinal.value= precioFinal;
 }
