@@ -72,7 +72,7 @@ function PrecioFinal ()
     precioTresString= (txtIdPrecioTres.value);
     precioTresParseado= parseInt (precioTresString);
 
-    suma=(precioUnoParseado+precioDosParseado+precioTresParseado);
+    suma=precioUnoParseado+precioDosParseado+precioTresParseado;
     iva= suma*0.21;
     importefinal=suma+iva;
 
