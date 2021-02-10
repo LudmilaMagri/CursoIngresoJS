@@ -11,8 +11,7 @@ function mostrar()
 {
     var dato1;
     var dato2;
-    
-    
+
 
     dato1= prompt("Ingrese un número");
     dato1= parseInt(dato1);
@@ -20,9 +19,11 @@ function mostrar()
     dato2= prompt("Ingrese otro número");
     dato2=parseInt(dato2);
 
+
+
     if (dato1==dato2)
     {
-        alert("dato1"+"dato2");
+        alert(dato1+""+dato2+"");
     }
     else
     {

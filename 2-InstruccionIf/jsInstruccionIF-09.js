@@ -2,11 +2,15 @@ function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
 	
-	var nota;
+	var numero;
 
+	numero= (numero= Math.floor(Math.random() *100));
 
-	numero= Math.round (Math.random() * 9 +1) ;
+	if (numero<11)
+	{
+		alert(numero);
+	}
 
-	alert(numero);
+	
 
 }//FIN DE LA FUNCIÓN

@@ -23,10 +23,14 @@ function mostrar()
 	else
 	{
 		if (nota>4)
+		{
 			alert ("APROBÓ");
+		}
 		
 		else 
+		{
 			alert ("Vamos, la próxima se puede");
+		}
 
 	}
 

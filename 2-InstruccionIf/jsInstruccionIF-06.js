@@ -15,12 +15,13 @@ function mostrar()
 	{
 
 		if (edadParseado<18)
-
+		{
 			alert ("Es adolescente");
-
+		}
 		else 
-
+		{
 			alert("Es mayor de edad");
+		}
 
 	
 	}
