@@ -27,7 +27,16 @@ function mostrar()
 		default:
 			alert ("tiene 31 días");
 			break;
-		/*case "Enero":
+
+		
+	}
+	
+
+
+
+}//FIN DE LA FUNCIÓN
+
+/*case "Enero":
 		case "Marzo":
 		case "Mayo":
 		case "Julio":
@@ -38,9 +47,3 @@ function mostrar()
 			break;
 
 			*/
-	}
-	
-
-
-
-}//FIN DE LA FUNCIÓN

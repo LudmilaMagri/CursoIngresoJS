@@ -10,75 +10,102 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var cantidadLamparas;
-    var tipoLamparas;
-    var precioConDescuento;
-    var precioFinal;
+ 	var cantidadLamparitas;
     var descuento;
-    var resultado;
+    var precioFinal;
+    var precioUnitarioLampara = 35;
+    var marcaLampara;
+    var precioFinalIIBB;
 
-    cantidadLamparas = txtIdCantidad.value;
-    cantidadLamparas = parseInt (cantidadLamparas);
+    cantidadLamparitas = txtIdCantidad.value;
+    cantidadLamparitas = parseInt(cantidadLamparitas);
 
-    tipoLamparas = Marca.value;
+    marcaLampara = Marca.value;
 
-    txtIdprecioDescuento.value= precioConDescuento;
-    precioConDescuento = parseInt (precioConDescuento);
-
-    precioFinal= 35;
-
-
-
-     if (cantidadLamparas >= 6 )
+    if(cantidadLamparitas>5)
     {
-        descuento= precioFinal*50/100;
-        resultado= precioFinal- descuento;
-        txtIdprecioDescuento.value= resultado *6;
+        //Mayor 5
+        //aplicar descuento del 50%.
+        descuento= 50;
     }
-    else if (cantidadLamparas==5 && tipoLamparas=="ArgentinaLuz")
+    else
     {
-        descuento= precioFinal*40/100;
-        resultado= precioFinal-descuento;
-        txtIdprecioDescuento.value= resultado *5;
-     
-    }
-    else if (cantidadLamparas==5 && tipoLamparas !="ArgentinaLuz")
-    {
-        descuento= precioFinal*30/100;
-        resultado= precioFinal-descuento;
-        txtIdprecioDescuento.value= resultado *5;
+        //Menor o = 5
+        //Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
+        if(cantidadLamparitas == 5)
+        {
+            if(marcaLampara == "ArgentinaLuz")
+            {
+                //descuento del 40 %
+                descuento= 40;
+            }
+            else
+            {
+                //el otro descuento
+                descuento= 30;
+            }
+        }    
+
+        else
+        {
+            //Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace un descuento del 25 % y si es de otra marca el descuento es del 20%.
+            
+             if (cantidadLamparitas== 4)
+            {
+                if (marcaLampara== "ArgentinaLuz" || marcaLampara=="FelipeLamparas")
+                {
+                 //descuento del 25%
+                descuento= 25;
+                }
+                else
+                {
+                //descuento del 20%
+                descuento= 20;
+                }
+            }
+             
+            
+            else
+            {
         
-    }
-    else if (cantidadLamparas==4 && tipoLamparas=="ArgentinaLuz"|| tipoLamparas=="FelipeLamparas")
-    {
-         descuento= precioFinal*25/100;
-         resultado= precioFinal-descuento;
-         txtIdprecioDescuento.value= resultado *4;
-    }
-    else if (cantidadLamparas==4 && tipoLamparas!="ArgentinaLuz"|| tipoLamparas!="FelipeLamparas")
-    {
-         descuento= precioFinal*20/100;
-         resultado= precioFinal-descuento;
-         txtIdprecioDescuento.value= resultado *4;
-    }
-    else if (cantidadLamparas==3 && tipoLamparas=="ArgentinaLuz")
-    {
-        descuento= precioFinal*15/100;
-        resultado= precioFinal-descuento;
-        txtIdprecioDescuento.value= resultado *3;
-    }
-    else if (cantidadLamparas==3 && tipoLamparas=="FelipeLamparas")
-    {
-        descuento= precioFinal*25/100;
-        resultado= precioFinal-descuento;
-        txtIdprecioDescuento.value= resultado *3;
-    }
-    else if (cantidadLamparas==3 && tipoLamparas!="ArgentinaLuz" || tipoLamparas!= "FelipeLamparas")
-    {
-        descuento= precioFinal*5/100;
-        resultado= precioFinal-descuento;
-        txtIdprecioDescuento.value= resultado *3;
-    }
+                if (cantidadLamparitas==3)
+                {
+                    if (marcaLampara== "ArgentinaLuz")
+                    {
+                        descuento=15;
+                    }
+                    else
+                    {
+                        descuento= 5;
+                    }
+                }
+        
+            
+                else
+                {
+                        if (cantidadLamparitas==3)
+                        {
+
+                            if (marcaLampara== "ArgentinaLuz")
+                            {
+                                descuento=10;
+                            }
+                            
+                        }
+                }
+            }
+                
+        }    
+    }        
+        precioFinal= (precioUnitarioLampara*cantidadLamparitas)*(descuento/100)-precioUnitarioLampara;
 
 
+        if (precioFinal>120)
+        {
+            precioFinalIIBB= (precioFinal*10/100)+precioFinal;
+        }
+
+        txtIdprecioDescuento.value= precioFinalIIBB;
+
+    
 }

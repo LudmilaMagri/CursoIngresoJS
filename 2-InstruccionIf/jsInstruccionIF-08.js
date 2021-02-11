@@ -10,6 +10,7 @@ function mostrar()
 
 	estado= estadoCivil.value;
 
+
 	if(edad>17 && estado=="Soltero") 
 	{
 
