@@ -3,12 +3,13 @@
 function mostrar()
 {
 
-	var i;
-	i = prompt("ingrese un numero");
-	limite= 10000;
-	for (var i; i<limite; i++)
-	{
-		if (i=="break")
+	var numero= parseInt(prompt ("ingrese un numero"));
+
+	for (var i=1; i<numero; i++)
+	{	
+		console.log (i);
+
+		if (i== 3)
 		{
 			break;
 		}
